@@ -69,6 +69,7 @@
             <div class="display-pic">
                 <img id="image" src="<%= typeof filename != 'undefined' ? filename: '' %>" class="responsive-img">
             </div>
+            <textarea rows="10" cols="100"></textarea>
         </div>
     </div>
     <% } %>
@@ -78,11 +79,23 @@
 
         </div>
     <% } %>
+    <div class="test">
+        <img src="" alt="" class="im">
+    </div>
     <!-- footer -->
     <% include partials/footer %>
 
     <!--myJavaScript-->
     <script src="../js/navNoEffect.js"></script>
+    <script src="../js/pics.js"></script>
+    <script>
+        let test;
+        <% if (!typeof pics === undefined) { %>
+            test = <%-JSON.stringify(pics)%>
+        <% } %>
+        
+        console.log(test);
+    </script>
 </body>
 
 </html>

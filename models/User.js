@@ -24,6 +24,10 @@ const UserSchema = new mongoose.Schema({
     date: {
         type: Date,
         default: Date.now
+    },
+    pic_ID: {
+        type: String,
+        required: true
     }
 });
 

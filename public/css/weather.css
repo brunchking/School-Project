@@ -5,9 +5,7 @@
     font-family: 'Lato', Arial, sans-serif;
 }
 
-html, body {
-    margin-right: -10px;
-}
+
 header {
     position: relative;
     height: 90vh;
@@ -40,6 +38,7 @@ header .container {
     position: relative;
     z-index: 2;
 }
+
 
 /* @media (pointer: coarse) and (hover: none) {
     header {
@@ -161,4 +160,10 @@ td, th {
 
 .Row2 {
     margin-top: 10px;
+}
+
+@media (min-width: 576px) and (max-width: 1199.98px) {
+    .Box01 {
+        margin-left: 50px;    
+    }
 }

@@ -8,12 +8,16 @@ const passport = require('passport');
 const User = require('../models/User');
 const { ensureAuthenticated } = require('../config/auth');
 const uuidv4 = require('uuid/v4');
-const sharp = require('sharp'); // resize
 const multer = require('multer'); // Multer upload image
+const Pic_ID = require('../models/Pic_ID');
+const testFolder = './tests/';
+const fs = require('fs');
 
 
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: true }));
+
+let pic_IDs = {"notEmpty": "notEmpty"};
 
 // Multer storage
 const storage = multer.diskStorage({
@@ -46,40 +50,26 @@ function checkFileType(file, cb) {
     }
 }
 
-// Resize sharp
-class Resize {
-    constructor(folder) {
-        this.folder = folder;
-    }
-    async save(buffer) {
-        const filename = Resize.filename();
-        const filepath = this.filepath(filename);
-
-        await sharp(buffer)
-            .resize(650, 380, {
-                fit: sharp.fit.inside,
-                withoutEnlargement: true
-            })
-            .toFile(filepath);
-
-        return filename;
-    }
-    static filename() {
-        return `${uuidv4()}.png`;
-    }
-    filepath(filename) {
-        return path.resolve(`${this.folder}/${filename}`)
-    }
-}
 
 let isLogin = false;
+let count = 0;
+fs.readdir('public/user-upload', (err, files) => {
+    if (err) {
+        return console.error(err);
+    }
+    files.forEach(file => {
+        pic_IDs[count] = file;
+        ++count;
+    });
+    console.log(pic_IDs);
+});
 
 router.get('/', async function (req, res) {
     if (req.isAuthenticated()) {
-        await res.render('community', { layout: false, isLogin: true, filename: undefined });
+        await res.render('community', { layout: false, isLogin: true, filename: undefined, pics: pic_IDs});
     }
     else {
-        await res.render('community', { layout: false, isLogin: false, filename: undefined });
+        await res.render('community', { layout: false, isLogin: false, filename: undefined , pics: pic_IDs});
     }
 });
 
@@ -99,12 +89,18 @@ router.post('/', upload.single('image'), async function (req, res) {
     const imagePath = path.join(__dirname, '../public/user-upload');
     const fileUpload = new Resize(imagePath);
     const filename = await fileUpload.save(req.file.buffer);
+   
+    const newPic = new Pic_ID({
+        pic_ID: filename
+    });
 
+    newPic.save();
     res.render('community', {
         layout: false,
         isLogin: isLogin,
-        msg: 'File Uploaded!',
-        filename: `user-upload/${filename}`
+        msg: '照片上傳成功!',
+        filename: `user-upload/${filename}`,
+        pics: pic_IDs
     });
 });
 
