@@ -42,15 +42,34 @@
     <link rel="stylesheet" href="css/paragraphTemplate.css">
     <link rel="stylesheet" href="css/socialMediaSideBar.css">
     <link rel="stylesheet" href="css/parallax.css">
-
+    <link rel="stylesheet" href="css/gotop.css">
+    <link rel="stylesheet" href="css/goleft.css">
+    <link rel="stylesheet" href="css/goright.css">
+    <link rel="stylesheet" href="css/transition.css">
 </head>
-<style>
+<style> 
+    p, h3{
+        font-family: 'Archivo', 'sans-serif';
+        font-size: 25px;
+    }
+    h3 {
+        font-size: 45px;
+    }
 </style>
 
 <body>
+
+    <!-- Goto left-->
+    <a href="/z2"><button id="back-to-left-btn"><i class="fas fa-angle-double-left"></i></button></a>
+    <!-- Goto right-->
+    <a href="b2"><button id="back-to-right-btn"><i class="fas fa-angle-double-right"></i></button></a>
+    <!-- Goto top-->
+    <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+
+
     <!--animated nav-->
     <%- include('partials/nav.ejs') %>
-
+    <div class="contaner"></div>
     <div class="pimg1">
         <div class="ptext">
             <span class="border">
@@ -84,14 +103,13 @@
 
                 ● Take the Taitung Railway to Chiayi Station - transfer to the Alishan Forest Railway at Alishan
                 Station.<br>
-                <p>
-                </p>
                 <p class="card-text"><small class="text-muted">
                         Reference website:<br>
                         <a
                             href="https://blog.kkday.com/36623/asia-taiwan-alishan-cherryblossom-hotelscombined">https://blog.kkday.com/36623/asia-taiwan-alishan-cherryblossom-hotelscombined</a></small>
                 </p>
-    
+            </p>
+        </p>
     </section>
 
     <div class="pimg2">
@@ -118,17 +136,24 @@
                 </span></a>
         </div>
     </div>
+
+
+    <!--social sidebar-->
+    <% include partials/social-sidebar %>
+
+    <!--footer-->
+    <% include partials/footer %>
 </body>
 
-<!--social sidebar-->
-<% include partials/social-sidebar %>
-
-<!--footer-->
-<% include partials/footer %>
+<!-- Barba.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
 
 <!--myJavaScript-->
 <!--nav-->
 <script src="../../js/navNoEffect.js"></script>
+<script src="../../js/gotop.js"></script>
+<script src="../../js/goleft.js"></script>
+<script src="../../js/goright.js"></script>
 </script>
 </body>
 

@@ -44,8 +44,38 @@
     <link rel="stylesheet" href="css/socialMediaSideBar.css">
     <link rel="stylesheet" href="css/community.css">
     <!--CSS-->
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <style>
+        * {
+            font-family: 'Amiko', sans-serif;
+        }
+
+        .head {
+            background-color: #E0E2DB;
+        }
+
+        body {
+            /* background-color: #3C91E6; */
+            background-color: #045de9;
+            background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+        }
+
+        h2 {
+            color: black;
+            font-size: 50px;
+        }
+
+        .panel-body {
+            font-size: 25px;
+        }
+
+        .btn {
+            font-size: 30px;
+        }
+        h2 {
+           background-color: white;
+           border: 2px solid black;;
+        }
     </style>
 </head>
 
@@ -56,7 +86,45 @@
     <!--social sidebar-->
     <% include partials/social-sidebar %>
 
-    <!-- upload -->
+    <!-- Comment board 20191125-->
+    <div class="container comment">
+        <!-- IT Login
+        <% if (username) { %>
+        <a class="btn btn-default" href="/logout">登出</a>
+        <% } else { %>
+        <a class="btn btn-default" href="/login">登入</a>
+        <% } %>
+        -->
+        <h2>Message board <i class="fas fa-comment-dots"></i></h2>
+        <br>
+        <% if (isLogin === true) { %>
+        <a class="btn btn-primary" href="/community/posts">New post</a>
+        <% } %>
+        <% if (isLogin === false)  { %>
+        <a class="btn btn-primary" href="/users">New post</a>
+        <% }%>
+        <br>
+        <br>
+        <br>
+
+        <div>
+            <% for(var i=0; i<posts.length; i++) { %>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= posts[i].author %>, Post time：<%= posts[i].createTime %></h3>
+                </div>
+                <div class="panel-body">
+                    <%= posts[i].content  %>
+                    <% if (isAdmin) { %>
+                    <a href="/posts/delete/<%= posts[i].id %>">刪除</a>
+                    <% } %>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+
+    <!-- Resize not working 20191125
     <% if (isLogin === true) { %>
     <div class="container community">
         <div class="upload-pic">
@@ -69,18 +137,22 @@
             <div class="display-pic">
                 <img id="image" src="<%= typeof filename != 'undefined' ? filename: '' %>" class="responsive-img">
             </div>
-            <textarea rows="10" cols="100"></textarea>
         </div>
     </div>
     <% } %>
 
-    <% if (isLogin === false) { %> 
-        <div class="pillar">
-
-        </div>
+    <% if (isLogin === false) { %>
+  
     <% } %>
-    <div class="test">
-        <img src="" alt="" class="im">
+    -->
+    <div class="container">
+        <a class="twitter-timeline" data-height="1000" data-theme="white"
+            href="https://twitter.com/TripToTaiwan?ref_src=twsrc%5Etfw">Tweets by TripToTaiwan</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
+    <div class="pillar">
+
     </div>
     <!-- footer -->
     <% include partials/footer %>
@@ -91,10 +163,10 @@
     <script>
         let test;
         <% if (!typeof pics === undefined) { %>
-            test = <%-JSON.stringify(pics)%>
+            test = <% -JSON.stringify(pics) %>
         <% } %>
-        
-        console.log(test);
+
+            console.log(test);
     </script>
 </body>
 

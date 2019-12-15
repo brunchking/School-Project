@@ -41,86 +41,98 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/paragraphTemplate.css">
     <link rel="stylesheet" href="css/socialMediaSideBar.css">
-    
+    <link rel="stylesheet" href="css/gotop.css">
+    <link rel="stylesheet" href="css/goleft.css">
+    <link rel="stylesheet" href="css/goright.css">
+
     <% switch (char) {
         case 'b': %>
-            <link rel="stylesheet" href="css/parallax/b2.css">
-            <% break;
+    <link rel="stylesheet" href="css/parallax/b2.css">
+    <% break;
         case 'c': %>
-            <link rel="stylesheet" href="css/parallax/c2.css">
-            <% break;
+    <link rel="stylesheet" href="css/parallax/c2.css">
+    <% break;
         case 'd': %>
-            <link rel="stylesheet" href="css/parallax/d2.css">
-            <% break;  
+    <link rel="stylesheet" href="css/parallax/d2.css">
+    <% break;  
         case 'e': %>
-            <link rel="stylesheet" href="css/parallax/e2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/e2.css">
+    <% break;   
         case 'f': %>
-            <link rel="stylesheet" href="css/parallax/f2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/f2.css">
+    <% break;   
         case 'g': %>
-            <link rel="stylesheet" href="css/parallax/g2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/g2.css">
+    <% break;   
         case 'h': %>
-            <link rel="stylesheet" href="css/parallax/h2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/h2.css">
+    <% break;   
         case 'i': %>
-            <link rel="stylesheet" href="css/parallax/i2.css">
-            <% break;      
+    <link rel="stylesheet" href="css/parallax/i2.css">
+    <% break;      
         case 'j': %>
-            <link rel="stylesheet" href="css/parallax/j2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/j2.css">
+    <% break;   
         case 'k': %>
-            <link rel="stylesheet" href="css/parallax/k2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/k2.css">
+    <% break;   
         case 'l': %>
-            <link rel="stylesheet" href="css/parallax/l2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/l2.css">
+    <% break;   
         case 'm': %>
-            <link rel="stylesheet" href="css/parallax/m2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/m2.css">
+    <% break;   
         case 'n': %>
-            <link rel="stylesheet" href="css/parallax/n2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/n2.css">
+    <% break;   
         case 'o': %>
-            <link rel="stylesheet" href="css/parallax/o2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/o2.css">
+    <% break;   
         case 'p': %>
-            <link rel="stylesheet" href="css/parallax/p2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/p2.css">
+    <% break;   
         case 'q': %>
-            <link rel="stylesheet" href="css/parallax/q2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/q2.css">
+    <% break;   
         case 'r': %>
-            <link rel="stylesheet" href="css/parallax/r2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/r2.css">
+    <% break;   
         case 's': %>
-            <link rel="stylesheet" href="css/parallax/s2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/s2.css">
+    <% break;   
         case 't': %>
-            <link rel="stylesheet" href="css/parallax/t2.css">  
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/t2.css">
+    <% break;   
         case 'u': %>
-            <link rel="stylesheet" href="css/parallax/u2.css">  
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/u2.css">
+    <% break;   
         case 'v': %>
-            <link rel="stylesheet" href="css/parallax/v2.css">
-            <% break;                          
+    <link rel="stylesheet" href="css/parallax/v2.css">
+    <% break;                          
         case 'w': %>
-            <link rel="stylesheet" href="css/parallax/w2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/w2.css">
+    <% break;   
         case 'x': %>
-            <link rel="stylesheet" href="css/parallax/x2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/x2.css">
+    <% break;   
         case 'y': %>
-            <link rel="stylesheet" href="css/parallax/y2.css">
-            <% break;   
+    <link rel="stylesheet" href="css/parallax/y2.css">
+    <% break;   
         case 'z': %>
-            <link rel="stylesheet" href="css/parallax/z2.css">
-            <% break;                                  
+    <link rel="stylesheet" href="css/parallax/z2.css">
+    <% break;                                  
     } %>
 </head>
 <style>
+    p,
+    h3 {
+        font-family: 'Archivo', 'sans-serif';
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 45px;
+    }
 </style>
 
 <body>
@@ -129,93 +141,97 @@
 
     <% switch (char) {
         case 'b': %>
-            <%- include('attractions_parallax/b2.ejs') %>
-            <% break;
+    <%- include('attractions_parallax/b2.ejs') %>
+    <% break;
         case 'c': %>
-            <%- include('attractions_parallax/c2.ejs') %>
-            <% break;
+    <%- include('attractions_parallax/c2.ejs') %>
+    <% break;
         case 'd': %>
-            <%- include('attractions_parallax/d2.ejs') %>
-            <% break;  
+    <%- include('attractions_parallax/d2.ejs') %>
+    <% break;  
         case 'e': %>
-            <%- include('attractions_parallax/e2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/e2.ejs') %>
+    <% break;   
         case 'f': %>
-            <%- include('attractions_parallax/f2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/f2.ejs') %>
+    <% break;   
         case 'g': %>
-            <%- include('attractions_parallax/g2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/g2.ejs') %>
+    <% break;   
         case 'h': %>
-            <%- include('attractions_parallax/h2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/h2.ejs') %>
+    <% break;   
         case 'i': %>
-            <%- include('attractions_parallax/i2.ejs') %>
-            <% break;      
+    <%- include('attractions_parallax/i2.ejs') %>
+    <% break;      
         case 'j': %>
-            <%- include('attractions_parallax/j2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/j2.ejs') %>
+    <% break;   
         case 'k': %>
-            <%- include('attractions_parallax/k2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/k2.ejs') %>
+    <% break;   
         case 'l': %>
-            <%- include('attractions_parallax/l2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/l2.ejs') %>
+    <% break;   
         case 'm': %>
-            <%- include('attractions_parallax/m2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/m2.ejs') %>
+    <% break;   
         case 'n': %>
-            <%- include('attractions_parallax/n2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/n2.ejs') %>
+    <% break;   
         case 'o': %>
-            <%- include('attractions_parallax/o2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/o2.ejs') %>
+    <% break;   
         case 'p': %>
-            <%- include('attractions_parallax/p2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/p2.ejs') %>
+    <% break;   
         case 'q': %>
-            <%- include('attractions_parallax/q2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/q2.ejs') %>
+    <% break;   
         case 'r': %>
-            <%- include('attractions_parallax/r2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/r2.ejs') %>
+    <% break;   
         case 's': %>
-            <%- include('attractions_parallax/s2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/s2.ejs') %>
+    <% break;   
         case 't': %>
-            <%- include('attractions_parallax/t2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/t2.ejs') %>
+    <% break;   
         case 'u': %>
-            <%- include('attractions_parallax/u2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/u2.ejs') %>
+    <% break;   
         case 'v': %>
-            <%- include('attractions_parallax/v2.ejs') %>
-            <% break;                          
+    <%- include('attractions_parallax/v2.ejs') %>
+    <% break;                          
         case 'w': %>
-            <%- include('attractions_parallax/w2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/w2.ejs') %>
+    <% break;   
         case 'x': %>
-            <%- include('attractions_parallax/x2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/x2.ejs') %>
+    <% break;   
         case 'y': %>
-            <%- include('attractions_parallax/y2.ejs') %>
-            <% break;   
+    <%- include('attractions_parallax/y2.ejs') %>
+    <% break;   
         case 'z': %>
-            <%- include('attractions_parallax/z2.ejs') %>
-            <% break;                                  
+    <%- include('attractions_parallax/z2.ejs') %>
+    <% break;                                  
     } %>
 
-    
+
     <!--social sidebar-->
     <% include partials/social-sidebar %>
 
     <!--footer-->
     <% include partials/footer %>
 
+
     <!--myJavaScript-->
     <!--nav-->
     <script src="../../js/navNoEffect.js"></script>
-    </script>
+    <script src="../../js/gotop.js"></script>
+    <script src="../../js/goleft.js"></script>
+    <script src="../../js/goright.js"></script>
+
 </body>
 
-</html> 
+</html>

@@ -53,24 +53,47 @@
     <!--animated nav-->
     <%- include('partials/nav') %>
 
-    <!--HomePageText&Button-->
-    <div class="home-text d-flex justify-content-center animated bounceInDown">
-        <div class="hr-1">
-            <hr class="horizontal-line" style="height:2px; background-color:#353b48">
-        </div>
-        TAIWAN<br>
-        SOUL<br>
-        <div class="hr-2">
-            <hr class="horizontal-line" style="height:2px; background-color:#353b48">
-        </div>
-    </div>
-    <br>
-    <div class="enter-btn">
-        <a href="/choose"><button class="btn btn-outline-dark btn-title animated bounceInDown">Enter</button></a>
-    </div>
+    <header>
+        <section>
+            <div class="tp101">
+                <img src="../photo/101.png" alt="">
+            </div>
+
+            <div class="taiwanSoul">
+                <!--HomePageText&Button-->
+                <div class="home-text d-flex justify-content-center animated bounceInDown">
+                    <div class="hr-1">
+                        <hr class="horizontal-line" style="height:2px; background-color:#353b48">
+                    </div>
+                    TAIWAN<br>
+                    SOUL<br>
+                    <div class="hr-2">
+                        <hr class="horizontal-line" style="height:2px; background-color:#353b48">
+                    </div>
+                </div>
+                <br>
+                <div class="enter-btn">
+                    <a href="/choose"><button
+                            class="btn btn-outline-dark btn-title animated bounceInDown">Enter</button></a>
+                </div>
+            </div>
+        </section>
+    </header>
+    <div class="slider"></div>
+
 
     <!--social sidebar-->
     <% include partials/social-sidebar %>
+
+
+
+    <!-- Slide in animation-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+        integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
+    <script src="js/indexAnimation.js"></script>
+    <!-- Slide in animation-->
 
     <!--myJavaScript-->
     <!--nav-->
@@ -78,6 +101,8 @@
     <!--myjs-->
     <script src="js/myjs.js"></script>
     <!--myJavaScript-->
+
+
 </body>
 
 </html>

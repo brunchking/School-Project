@@ -2,12 +2,14 @@ body, html {
     overflow-x: hidden;
 }
 
+h2 {
+    font-family: 'Amiko', sans-serif;
+}
 .community {
     border: 2px solid black;
     height: 800px;
     width: 100%;
     background-color: white;
-
 }
 
 .upload-pic {
@@ -25,7 +27,7 @@ body, html {
 }
 
 .pillar {
-    height: 800px;
+    height: 100px;
     padding-top: 100px;
     width: 100%;
 }
@@ -34,3 +36,8 @@ body, html {
     width: 500px;
     height: 500px;
 }
+
+.comment {
+    padding-top: 7vh;
+}
+

@@ -10,10 +10,20 @@ const https = require('https');
 const city = require('../public/js/weather/current_weather/city');
 require('dotenv').config();
 
+
+
+
 let isLogin = false;
 let first = false;
 
+
+var translate = require('yandex-translate')("trnsl.1.1.20191208T153717Z.65a60fdbf950cbf7.712ff159f434eba343b79e95c3e7342cca6b28c9");
+
+
+
+
 router.get('/', async (req, res, next) => {
+
     let api_key = process.env.API_KEY;
     let api_url = `https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=${api_key}&format=JSON&elementName=MinT,MaxT`;
     const url1 = 'https://www.cwb.gov.tw/Data/js/Observe/Observe_Home.js?';
@@ -40,7 +50,7 @@ router.get('/', async (req, res, next) => {
 
     Object.keys(city).forEach(async (data, index) => {
         weatherData[index] = weatherInfo(json, city[data]);
-        if (index === 21) {
+        if (index === 21) { 
             res.render('weather', { layout: false, isLogin: isLogin, weatherData });
             // weatherData is an array
         }

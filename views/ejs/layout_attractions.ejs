@@ -42,11 +42,23 @@
     <link rel="stylesheet" href="css/paragraphTemplate.css">
     <link rel="stylesheet" href="css/socialMediaSideBar.css">
 
+
+
 </head>
 <style>
+    p,
+    h3 {
+        font-family: 'Archivo', 'sans-serif';
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 45px;
+    }
 </style>
 
 <body>
+
     <!--animated nav-->
     <%- include('partials/nav.ejs') %>
 
@@ -54,84 +66,84 @@
         <div class="card-group">
             <% switch (char) {
                 case 'b': %>
-                    <%- include('partials/attractions_parallax/b.ejs') %>
-                    <% break;
+            <%- include('partials/attractions_parallax/b.ejs') %>
+            <% break;
                 case 'c': %>
-                    <%- include('partials/attractions_content/c.ejs') %>
-                    <% break;
+            <%- include('partials/attractions_content/c.ejs') %>
+            <% break;
                 case 'd': %>
-                    <%- include('partials/attractions_content/d.ejs') %>
-                    <% break;  
+            <%- include('partials/attractions_content/d.ejs') %>
+            <% break;  
                 case 'e': %>
-                    <%- include('partials/attractions_content/e.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/e.ejs') %>
+            <% break;   
                 case 'f': %>
-                    <%- include('partials/attractions_content/f.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/f.ejs') %>
+            <% break;   
                 case 'g': %>
-                    <%- include('partials/attractions_content/g.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/g.ejs') %>
+            <% break;   
                 case 'h': %>
-                    <%- include('partials/attractions_content/h.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/h.ejs') %>
+            <% break;   
                 case 'i': %>
-                    <%- include('partials/attractions_content/i.ejs') %>
-                    <% break;      
+            <%- include('partials/attractions_content/i.ejs') %>
+            <% break;      
                 case 'j': %>
-                    <%- include('partials/attractions_content/j.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/j.ejs') %>
+            <% break;   
                 case 'k': %>
-                    <%- include('partials/attractions_content/k.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/k.ejs') %>
+            <% break;   
                 case 'l': %>
-                    <%- include('partials/attractions_content/l.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/l.ejs') %>
+            <% break;   
                 case 'm': %>
-                    <%- include('partials/attractions_content/m.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/m.ejs') %>
+            <% break;   
                 case 'n': %>
-                    <%- include('partials/attractions_content/n.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/n.ejs') %>
+            <% break;   
                 case 'o': %>
-                    <%- include('partials/attractions_content/o.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/o.ejs') %>
+            <% break;   
                 case 'p': %>
-                    <%- include('partials/attractions_content/p.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/p.ejs') %>
+            <% break;   
                 case 'q': %>
-                    <%- include('partials/attractions_content/q.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/q.ejs') %>
+            <% break;   
                 case 'r': %>
-                    <%- include('partials/attractions_content/r.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/r.ejs') %>
+            <% break;   
                 case 's': %>
-                    <%- include('partials/attractions_content/s.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/s.ejs') %>
+            <% break;   
                 case 't': %>
-                    <%- include('partials/attractions_content/t.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/t.ejs') %>
+            <% break;   
                 case 'u': %>
-                    <%- include('partials/attractions_content/u.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/u.ejs') %>
+            <% break;   
                 case 'v': %>
-                    <%- include('partials/attractions_content/v.ejs') %>
-                    <% break;                          
+            <%- include('partials/attractions_content/v.ejs') %>
+            <% break;                          
                 case 'w': %>
-                    <%- include('partials/attractions_content/w.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/w.ejs') %>
+            <% break;   
                 case 'x': %>
-                    <%- include('partials/attractions_content/x.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/x.ejs') %>
+            <% break;   
                 case 'y': %>
-                    <%- include('partials/attractions_content/y.ejs') %>
-                    <% break;   
+            <%- include('partials/attractions_content/y.ejs') %>
+            <% break;   
                 case 'z': %>
-                    <%- include('partials/attractions_content/z.ejs') %>
-                    <% break;                                  
+            <%- include('partials/attractions_content/z.ejs') %>
+            <% break;                                  
             } %>
         </div>
     </div>
-    
+
     <!--social sidebar-->
     <% include partials/social-sidebar %>
 
@@ -141,7 +153,8 @@
     <!--myJavaScript-->
     <!--nav-->
     <script src="../../js/navNoEffect.js"></script>
-    </script>
+
+
 </body>
 
 </html>
